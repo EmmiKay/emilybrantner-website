@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Emily's homepage</title>
+    <link rel = "stylesheet"
+      type = "text/css"
+      href = "{{ url_for('static', filename='css/style.css') }}" />
+    <script src="{{ url_for('static', filename='js/stickynav.js') }}" async>
+    </script>
+  </head>
+
+<!╌ navigation ╌>
+  <body id="top">
+    <div class="fixed">
+    </div>
+   <div>
+     <header>
+       <div id="navbar" class="navigation">
+         <nav id=main-menu class=navlink>
+            <li><a href="#top">home</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#resume">resum&eacute;</a></li>
+            <li><a href="#contact">contact</a></li>
+          </nav>
+       </div>
+       <div id="greenbox">
+       </div>
+
+       <input type="checkbox" id="hamburger-input"/>
+       <label id="hamburger-menu" for="hamburger-input">
+         <br>
+         <nav id="sidebar-menu">
+           <li><a href="#top">home</a></li>
+           <li><a href="#projects">projects</a></li>
+           <li><a href="#about">about</a></li>
+           <li><a href="#resume">resum&eacute;</a></li>
+           <li><a href="#contact">contact</a></li>
+         </nav>
+       </label>
+
+    </header>
+
+<!╌ name and description ╌>
+      <main class="lightgray">
+        <div style='float:left; margin: 4em; margin-right: 1em;'>
+          <img src="{{ url_for('static', filename='img/circle_headshot.png') }}" style='width: 5em; height: 5em; ' />
+        </div>
+        <div class="rtmargin500">
+          <br>
+          <h1>Emily K Brantner</h1>
+          <h3>| data leader | programmer | backpacker | yogi |</h3>
+          <br>
+        </div>
+
+<!╌ projects and responsive tiles ╌>
+        <section id="projects" class="margin0white">
+          <h2>projects</h2>
+            <div style='float:left; padding-top: 0.4em;'>
+              <h3>code</h3>
+            </div>
+            <div style='padding-left: 5em;'>
+              <a href="http://www.github.com/EmmiKay" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='img/GitHub-Mark-32px.png') }}" />
+              </a>
+            </div>
+            <div class='grid'>
+
+              <div class="box">
+                <div class="boxInner">
+                  <a href='' target="_blank" rel="noopener noreferrer">
+                      <img src="{{ url_for('static', filename='img/this_website.png') }}" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="box">
+                <div class="boxInner">
+                  <a href='https://github.com/EmmiKay/Live-Face-Detector' target="_blank" rel="noopener noreferrer">
+                      <img src="{{ url_for('static', filename='img/face_detector.png') }}" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="box">
+                <div class="boxInner">
+                  <a href='https://github.com/EmmiKay/Swooter_Game' target="_blank" rel="noopener noreferrer">
+                      <img src="{{ url_for('static', filename='img/pygame_game.png') }}" />
+                  </a>
+                </div>
+              </div>
+
+              <div class="box">
+                <div class="boxInner">
+                  <a href='https://flask-autoarki.herokuapp.com/index' target="_blank" rel="noopener noreferrer">
+                      <img src="{{ url_for('static', filename='img/autoarki.png') }}" />
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <br>
+
+            <h3>video</h3>
+            <div class='grid'>
+
+              <div class="box">
+                <div class="boxInner">
+                  <a href='https://www.facebook.com/watch/live/?ref=watch_permalink&v=531027874582292' target="_blank" rel="noopener noreferrer">
+                      <img src="{{ url_for('static', filename='img/coding_livestream.png') }}" />
+                  </a>
+                </div>
+              </div>
+            </div>
+        </section>
+
+<!╌ about section ╌>
+        <section id="about" class="rtmargin500">
+          <h2>about</h2>
+          <p>
+          I'm the Analytics Team Lead for City Data (compliance, ops, trust & safety) at
+          Bird. I spend my days collaborating with stakeholders in product and operations,
+          writing queries, testing products (A/B, pre/post, etc),
+          and creating dashboards. In my time at Bird so far, I've transformed the city data team from reactive to
+          proactive and successfully scaled the
+          amount of day-to-day work from a five-person to a two-person job by implementing
+          more standardized processes, better products, and reusable tools, giving our
+          analysts more time to find new insights and
+          less time on basic reporting.
+          <br>
+          <br>
+          Before Bird, I picked up some graphic design skills from a year at the EPA as an outreach associate.
+          I designed all of our publicly-facing items such as books, calendars, and posters. I taught myself SQL
+          and used that to leverage a role at SAP where I was a senior analytics consultant and then a senior
+          project manager in charge of a $30 million dollar implementation with over 70+ global consultants reporting
+          into me on the project. While at SAP, I started my MS at UC Berkeley in Information and Data Science, and used
+          that to break away from SAP analytics products and into the pure data world. I sharpened my skills on my own
+          and in school until I landed my current role at Bird.
+          <br>
+          <br>
+          Before I was in the corporate world, I was a herpetologist (one who studies
+          reptiles and amphibians) and received my MS in Biology. I spent months in the jungles of Panama and
+          Costa Rica, collecting frogs and swabbing them for <i>batrachochytrium
+          dendrobatidis</i>, a fungus that's killing amphibians in temperate climates around the world. I also
+          re-populated a lake in Wyoming with a speciess of frog that was previously extinct in the wild!
+          <br>
+          <br>
+          You can view my MS Thesis and the R code along with it <a href="https://digitalcommons.fiu.edu/etd/2267/" target="_blank">here</a>!
+
+          </p>
+        </section>
+
+
+<!╌ resume ╌>
+        <section id="resume" class="centerfit">
+          <h2>resum&eacute;</h2>
+          <a href="{{ url_for('static', filename='img/Brantner_Resume_Infographic_spring22.pdf') }}" download>
+            <button class="btn">download</button>
+          </a>
+  		<div>
+  	  	<img src="{{ url_for('static', filename='img/resume.png') }}"/>
+  		</div>
+        </section>
+
+<!╌ contact me form ╌>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <div id="contact" class="margin40"> <!--action="/example.html" method="POST"-->
+          <h2>contact me</h2>
+
+          <form action="" method="post" novalidate>
+              {{ form.hidden_tag() }}
+              <p>
+                  {{ form.name.label }}<br>
+                  {{ form.name(class='form') }}
+                  {% for error in form.name.errors %}
+                  <span style="color: red;">[{{ error }}]</span>
+                  {% endfor %}
+              </p>
+              <p>
+                  {{ form.email.label }}<br>
+                  {{ form.email(class='form') }}
+                  {% for error in form.email.errors %}
+                  <span style="color: red;">[{{ error }}]</span>
+                  {% endfor %}
+              </p>
+              <p>
+                  {{ form.subject.label }}<br>
+                  {{ form.subject(class='form') }}
+                  {% for error in form.subject.errors %}
+                  <span style="color: red;">[{{ error }}]</span>
+                  {% endfor %}
+              </p>
+              <p>
+                  {{ form.message.label }}<br>
+                  {{ form.message(class='form') }}
+                  {% for error in form.message.errors %}
+                  <span style="color: red;">[{{ error }}]</span>
+                  {% endfor %}
+              </p>
+              <p>{{ form.submit(class='form') }}</p>
+          </form>
+          {% if success %}
+          <p>Thank you for your message. We'll get back to you shortly.</p>
+          {% endif %}
+
+
+        </div>
+      </main>
+
+<!╌ footer ╌>
+      <footer>
+        <span>
+          <p>Created by: Emily Brantner
+          <a href="mailto:embrantner@gmail.com">embrantner@gmail.com</a></p>
+        </span>
+      </footer>
+    </div>
+
+  </body>
+
+</html>

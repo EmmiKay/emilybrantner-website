@@ -1,0 +1,323 @@
+/*defaults*/
+body {
+  margin: auto;
+  padding: 0;
+  max-width: 1440px;
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: 'Lado', sans-serif;
+  font-size: 3em;
+  letter-spacing: 0.05em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 1em;
+  padding-top: 0;
+}
+
+h2 {
+  font-family: 'Lado', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+h3 {
+  font-family: 'Lado', sans-serif;
+  letter-spacing: 0.05em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-transform: lowercase;
+}
+
+p,a,label,li {
+  font-family: 'Arial', sans-serif;
+  line-height: 150%;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+/***********************classes**********************/
+/* buttons */
+.btn {
+  background-color: #013f28;
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  border-top-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+}
+
+.btn:hover {
+  background-color: #013220;
+}
+
+/*responsive boxes*/
+.box {
+   float: left;
+   position: relative;
+   width: 20%;
+   padding-bottom: 20%;
+}
+
+.boxInner {
+   position: absolute;
+   left: 1em;
+   right: 1em;
+   top: 1em;
+   bottom: 1em;
+   overflow: hidden;
+}
+
+.boxInner img {
+   width: 100%;
+}
+
+.boxInner .titleBox {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin-bottom: -5em;
+   background: #000;
+   background: rgba(0, 0, 0, 0.5);
+   color: #FFF;
+   padding: 1em;
+   text-align: center;
+   -webkit-transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;
+   -o-transition: all 0.3s ease-out;
+   transition: all 0.3s ease-out;
+}
+
+body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+   margin-bottom: 0;
+}
+
+.grid{
+  overflow: hidden;
+  margin: 10px;
+}
+
+
+/*desktop nav bar and nav bar scrolling*/
+.fixed {
+  background-image: url("../img/header_image.png");
+  max-width: 100%;
+  height: 350px;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: fit;
+}
+
+.greenbox {
+  margin-top: -0.5em;
+  background-image: url("../img/stickynav.png");
+  background-repeat: no-repeat;
+  background-size: fit;
+  height: 2em;
+}
+
+.navigation {
+  padding-left: 2.5em;
+  margin-top: -2.5em;
+  height: 2.5em;
+  z-index: 1;
+  position:relative;
+}
+
+.navlink a:link {
+  font-size: 1.2em;
+  color: white;
+  font-weight: bolder;
+}
+
+.navlink a:hover {
+  color: #013220 !important;
+}
+
+.navlink a:visited {
+  font-size: 1.2em;
+  color: white;
+  font-weight: bolder;
+}
+
+.navlink li {
+   display: inline;
+   margin-right: 1em;
+   }
+
+.stickynav {
+  position: fixed;
+  margin-top: -342px;
+  background-image: url("../img/stickynav.png");
+  background-repeat: no-repeat;
+  background-size: fit;
+  width: 100%;
+  height: 2em;
+  padding-top: 0.6em;
+  padding-left: 2.5em;
+}
+
+.stickygb {
+  position: fixed;
+  margin-top: 0;
+}
+
+
+/*mobile hamburger navbar*/
+#hamburger-input{
+  display: none;
+}
+
+#hamburger-menu {
+    position: fixed;
+    top: 3em;
+    right: 3em;
+    width: 8em;
+    height: 8em;
+    display: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lado', sans-serif;
+    letter-spacing: 0.5em;
+    background: linear-gradient(
+      to bottom,
+      #013220, #013220 20%,
+      #01322000 20%, #01322000 40%,
+      #013220 40%, #013220 60%,
+      #01322000 60%, #01322000 80%,
+      #013220 80%, #013220 100%
+    );
+}
+
+#hamburger-menu #sidebar-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: -30em;
+    width: 30em;
+    height: 100%;
+    background-color: #013220;
+    transition: 0.3s;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3em;
+}
+
+#hamburger-menu a {
+  color: #FFFFFF;
+  font-size: 3em;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    visibility: visible;
+    right: 0;
+}
+#hamburger-input:checked ~ .overlay{
+   visibility: visible;
+  opacity: 0.4;
+}
+
+
+/*contact form*/
+.form {
+  font-size: 1.5em;
+}
+
+
+/*header*/
+.lightgray {
+  background: #EEE;
+  margin-top: -3em;
+}
+
+
+/*miscellaneous margin setting*/
+.margin40 {
+  margin: 2.5em;
+  margin-left: 4em;
+  margin-top: 0;
+  padding-bottom: 2em;
+}
+
+.margin0white{
+  margin: 0;
+  padding: 4em;
+  background: white;
+}
+
+.centerfit {
+  max-width: 100%;
+  background: white;
+  padding: 4em;
+}
+
+.rtmargin500 {
+  margin: 2.5em;
+  margin-left: 4em;
+  margin-right: 15em;
+}
+
+
+/*responsive displays*/
+@media only screen and (hover: none) and (pointer: coarse) {
+  #navbar {
+    display: none;
+  }
+
+  #greenbox {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+   /* smartphone: 1 tile */
+   .box {
+      width: 100%;
+      padding-bottom: 100%;
+   }
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* tablet: 2 tiles */
+   .box {
+      width: 50%;
+      padding-bottom: 50%;
+   }
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* small screen/ipad: 3 tiles */
+   .box {
+      width: 33.3%;
+      padding-bottom: 33.3%;
+   }
+}
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+   /* medium screen: 4 tiles */
+   .box {
+      width: 25%;
+      padding-bottom: 25%;
+   }
+}
