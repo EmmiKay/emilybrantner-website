@@ -1,3 +1,3 @@
 # emilybrantner.com
 
-Website was built from scratch in flaskapp by me, @EmmiKay! 
+Website was built from scratch using the flask framework by me, @EmmiKay! 
